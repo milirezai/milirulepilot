@@ -1,0 +1,23 @@
+{
+    "name": "milirezai/milirulepilot",
+    "description": "A modern, modular package for business rule management.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MiliRulePilot\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MiliRulePilot\\MiliRulePilotServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "illuminate/support": "^12.0"
+    },
+    "minimum-stability": "stable"
+}

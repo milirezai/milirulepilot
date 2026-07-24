@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Decisions;
+
+use MiliRulePilot\Decision\DecisionBase;
+
+class {className} extends DecisionBase
+{
+
+    public function name(): string
+    {
+        return '{decisionName}';
+    }
+
+    public function conditions(): array
+    {
+       return [
+
+       ];
+    }
+
+    public function result(): mixed
+    {
+        return true;
+    }
+}
