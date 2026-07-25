@@ -31,4 +31,12 @@ class DecisionBuilder
         File::delete(app_path('Decisions/').$name.'.php');
         return true;
     }
+
+    public function list()
+    {
+        $decisionList = glob(app_path('Decisions/').'*.php');
+        foreach ($decisionList as $item){
+            echo File::name($item);
+        }
+    }
 }

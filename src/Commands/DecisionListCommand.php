@@ -5,6 +5,7 @@ namespace MiliRulePilot\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use MiliRulePilot\Decision\DecisionBuilder\DecisionBuilder;
 
 class DecisionListCommand extends Command
 {
@@ -25,12 +26,9 @@ class DecisionListCommand extends Command
     /**
      * Execute the console command.
      */
-    public function handle()
+    public function handle(DecisionBuilder $decisionBuilder)
     {
-        $decisionList = glob(app_path('Decisions/').'*.php');
-        foreach ($decisionList as $item){
-            echo $this->line(File::name($item));
-        }
+        echo $this->line($decisionBuilder->list());
     }
 
 }

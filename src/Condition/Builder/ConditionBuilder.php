@@ -6,6 +6,7 @@ use MiliRulePilot\Condition\ConditionBase;
 use MiliRulePilot\Support\Contracts\ConditionBuildContract;
 
 
+
 class ConditionBuilder extends ConditionBase
 {
 

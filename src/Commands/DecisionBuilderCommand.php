@@ -13,7 +13,7 @@ class DecisionBuilderCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:decision {name}';
+    protected $signature = 'decision:make {name}';
 
     /**
      * The console command description.
