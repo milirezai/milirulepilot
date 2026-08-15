@@ -1,56 +1,24 @@
-<p align="center"><img src="resources/images/milirulepilot.png?raw=true"></p>
 
+<h3 align="center">
+Milirulepilot
+</h3>
 
-```php
+<p align="center">
+    <strong>Business Rules Engine for Laravel</strong>
+</p>
 
-milirulepilot/
-├─ src/
-│  ├─ Commands/
-│  │  ├─ DecisionBuilderCommand::class
-│  │  ├─ DecisionDeleteCommand::class
-│  │  ├─ DecisionListCommand::class
-│  ├─ Comparison/
-│  │  ├─ Operator /
-│  │  │ ├─ EqualOperator::class
-│  │  │ ├─ GreaterThanOperator::class
-│  │  │ ├─ LessThanOperator::class
-│  │  │ ├─ NotEqualOperator::class
-│  │  │ ├─ OperatorBase::class
-│  │  ├─ Comparison::class
-│  ├─ Condition/
-│  │  ├─ Builder/
-│  │  │ ├─ ConditionBuilder::class
-│  │  ├─ Dto
-│  │  │ ├─ ConditionDto::class
-│  │  ├─ ConditionBase::class
-│  ├─ Core/
-│  │  ├─ RulePIlotEngine::class
-│  ├─ Decision/
-│  │  ├─ DecisionBuilder/
-│  │  │ ├─ DecisionBuilder::class
-│  │  ├─ DecisionBase::class
-│  ├─ Facade/
-│  │  ├─ MiliRulePilot::class
-│  ├─ Result/
-│  │  ├─ Result::class
-│  ├─ RulePilot/
-│  │  ├─ MiliRulePilot::class
-│  ├─ Stub/
-│  │  ├─ decision::stub
-│  ├─ Support/
-│  │  ├─ Contracts/
-│  │  │ ├─ ConditionBuildContract::interface
-│  │  │ ├─ ConditionContentContract::interface
-│  │  │ ├─ DecisionBaseContract::interface
-│  │  ├─ Helper/
-│  │  ├─ Trait/
-│  ├─ MiliRulePilotServiceProvider::class
-├─ composer.json
-└─ README.md
-└─ RODMAP.md
+<p  align="center">
 
-```
+[![Latest Stable Version](https://img.shields.io/packagist/v/milirezai/milirulepilot.svg?style=flat-square)](https://packagist.org/packages/milirezai/milirulepilot)
+[![Total Downloads](https://img.shields.io/packagist/dt/milirezai/milirulepilot.svg?style=flat-square)](https://packagist.org/packages/milirezai/milirulepilot)
+[![PHP Version](https://img.shields.io/packagist/php-v/milirezai/milirulepilot.svg?style=flat-square)](https://packagist.org/packages/milirezai/milirulepilot)
+[![Laravel](https://img.shields.io/badge/Laravel-12.x|13.x-FF2D20?style=flat-square&logo=laravel&logoColor=white)](https://laravel.com)
+![GitHub Stars](https://img.shields.io/github/stars/milirezai/milirulepilot?style=flat&logo=github)
+![Contributors](https://img.shields.io/github/contributors/milirezai/milirulepilot?style=flat)
+![GitHub Forks](https://img.shields.io/github/forks/milirezai/milirulepilot?style=flat&logo=github)
+![GitHub Issues](https://img.shields.io/github/issues/milirezai/milirulepilot?style=flat&logo=github)
 
+</p>
 
 
 
