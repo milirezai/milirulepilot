@@ -1,12 +1,12 @@
 <?php
 
-namespace MiliRulePilot\Commands;
+namespace Milirulepilot\Commands;
 
-use MiliRulePilot\Decision\DecisionBuilder\DecisionBuilder;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
+use Milirulepilot\Decision\Builder as DecBuilder;
 
-class DecisionBuilderCommand extends Command
+class DecisionBuilder extends Command
 {
     /**
      * The name and signature of the console command.
@@ -25,7 +25,7 @@ class DecisionBuilderCommand extends Command
     /**
      * Execute the console command.
      */
-    public function handle(DecisionBuilder $decisionBuilder)
+    public function handle(DecBuilder $decisionBuilder)
     {
         $decisionName = $this->argument('name');
         if (!File::exists(app_path('Decisions')))

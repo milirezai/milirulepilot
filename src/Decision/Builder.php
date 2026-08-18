@@ -1,11 +1,12 @@
 <?php
 
-namespace MiliRulePilot\Decision\DecisionBuilder;
+namespace Milirulepilot\Decision;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use function Milirulepilot\Decision\DecisionBuilder\app_path;
 
-class DecisionBuilder
+class Builder
 {
     public function has(string $name): bool
     {

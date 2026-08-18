@@ -1,10 +1,10 @@
 <?php
 
-namespace MiliRulePilot\Condition\Dto;
+namespace Milirulepilot\Condition;
 
-use MiliRulePilot\Support\Contracts\ConditionContentContract;
+use Milirulepilot\Contracts\ConditionContent;
 
-class ConditionDto implements ConditionContentContract
+class Dto implements ConditionContent
 {
     public mixed $condition;
 

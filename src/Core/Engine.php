@@ -1,18 +1,18 @@
 <?php
 
-namespace MiliRulePilot\Core;
+namespace Milirulepilot\Core;
 
-use MiliRulePilot\Comparison\Comparison;
-use MiliRulePilot\Result\DecisionResult;
+use Milirulepilot\Comparison\Comparison;
+use Milirulepilot\Result\Result;
 
-class RulePilotEngine
+class Engine
 {
-    private DecisionResult $result;
+    private Result $result;
     protected Comparison $comparison;
     protected array $conditions;
     protected mixed $decision;
 
-    public function __construct(DecisionResult $result, Comparison $comparison)
+    public function __construct(Result $result, Comparison $comparison)
     {
         $this->result = $result;
         $this->comparison = $comparison;

@@ -1,12 +1,10 @@
 <?php
 
-namespace MiliRulePilot\Condition;
+namespace Milirulepilot\Condition;
 
-use MiliRulePilot\Condition\Dto\ConditionDto;
-use MiliRulePilot\Support\Contracts\ConditionBuildContract;
-use MiliRulePilot\Support\Contracts\ConditionContentContract;
+use Milirulepilot\Contracts\ConditionBuilder;
 
-abstract class ConditionBase implements ConditionBuildContract
+abstract class Condition implements ConditionBuilder
 {
     public string $field;
     public mixed $value;
@@ -15,7 +13,7 @@ abstract class ConditionBase implements ConditionBuildContract
 
     public function make()
     {
-        $con = new ConditionDto();
+        $con = new Dto();
         return $con->set($this->convertToArray());
     }
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace MiliRulePilot\Support\Contracts;
+namespace Milirulepilot\Contracts;
 
-interface ConditionContentContract
+interface ConditionContent
 {
     public function set(mixed $condition): self;
     public function getField();
