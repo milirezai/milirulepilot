@@ -1,8 +1,8 @@
 <?php
 
-namespace MiliRulePilot\Result;
+namespace Milirulepilot\Result;
 
-class DecisionResult
+class Result
 {
     protected array $resultConditions;
     protected array $processInfo;

@@ -1,11 +1,11 @@
 <?php
 
-namespace MiliRulePilot\Comparison;
+namespace Milirulepilot\Comparison;
 
-use MiliRulePilot\Comparison\Operator\EqualOperator;
-use MiliRulePilot\Comparison\Operator\GreaterThanOperator;
-use MiliRulePilot\Comparison\Operator\LessThanOperator;
-use MiliRulePilot\Comparison\Operator\NotEqualOperator;
+use Milirulepilot\Comparison\Operators\Equal;
+use Milirulepilot\Comparison\Operators\GreaterThan;
+use Milirulepilot\Comparison\Operators\LessThan;
+use Milirulepilot\Comparison\Operators\NotEqual;
 
 class Comparison
 {
@@ -19,16 +19,16 @@ class Comparison
         $operatorClass = null;
         switch ($operator){
             case '=':
-                $operatorClass = new EqualOperator();
+                $operatorClass = new Equal();
                 break;
             case '>':
-                $operatorClass = new GreaterThanOperator();
+                $operatorClass = new GreaterThan();
                 break;
             case '<':
-                $operatorClass = new LessThanOperator();
+                $operatorClass = new LessThan();
                 break;
             case '!=':
-                $operatorClass = new NotEqualOperator();
+                $operatorClass = new NotEqual();
                 break;
         }
         return $operatorClass;

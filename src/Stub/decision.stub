@@ -2,9 +2,9 @@
 
 namespace App\Decisions;
 
-use MiliRulePilot\Decision\DecisionBase;
+use Milirulepilot\Decision\Decision;
 
-class {className} extends DecisionBase
+class {className} extends Decision
 {
 
     public function name(): string

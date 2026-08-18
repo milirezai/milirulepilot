@@ -1,8 +1,8 @@
 <?php
 
-namespace MiliRulePilot\Comparison\Operator;
+namespace Milirulepilot\Comparison\Operators;
 
-abstract class OperatorBase
+abstract class Operator
 {
     public abstract function campare(mixed $condition, mixed $decision);
 }
