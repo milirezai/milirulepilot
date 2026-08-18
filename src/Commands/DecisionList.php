@@ -1,13 +1,13 @@
 <?php
 
-namespace MiliRulePilot\Commands;
+namespace Milirulepilot\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use MiliRulePilot\Decision\DecisionBuilder\DecisionBuilder;
+use Milirulepilot\Decision\Builder;
 
-class DecisionListCommand extends Command
+class DecisionList extends Command
 {
     /**
      * The name and signature of the console command.
@@ -26,7 +26,7 @@ class DecisionListCommand extends Command
     /**
      * Execute the console command.
      */
-    public function handle(DecisionBuilder $decisionBuilder)
+    public function handle(Builder $decisionBuilder)
     {
         echo $this->line($decisionBuilder->list());
     }

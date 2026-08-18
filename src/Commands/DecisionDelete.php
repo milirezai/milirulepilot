@@ -1,13 +1,13 @@
 <?php
 
-namespace MiliRulePilot\Commands;
+namespace Milirulepilot\Commands;
 
-use MiliRulePilot\Decision\DecisionBuilder\DecisionBuilder;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use Milirulepilot\Decision\Builder;
 
-class DecisionDeleteCommand extends Command
+class DecisionDelete extends Command
 {
     /**
      * The name and signature of the console command.
@@ -26,7 +26,7 @@ class DecisionDeleteCommand extends Command
     /**
      * Execute the console command.
      */
-    public function handle(DecisionBuilder $decisionBuilder)
+    public function handle(Builder $decisionBuilder)
     {
         $name = $this->argument('name');
         if ($decisionBuilder->delete($name))

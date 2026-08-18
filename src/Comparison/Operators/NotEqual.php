@@ -1,8 +1,8 @@
 <?php
 
-namespace MiliRulePilot\Comparison\Operator;
+namespace Milirulepilot\Comparison\Operators;
 
-class NotEqualOperator extends OperatorBase
+class NotEqual extends Operator
 {
     public function campare(mixed $condition, mixed $decision)
     {

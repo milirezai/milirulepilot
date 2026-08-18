@@ -117,16 +117,15 @@ laravel 12 به بعد
 
 این کلاس ها داخل دایرکتوری به اسم  Decisions تویه دایرکتوری app ساخته می شوند
 
-
 ```php
 
 <?php
 
 namespace App\Decisions;
 
-use MiliRulePilot\Decision\DecisionBase;
+use Milirulepilot\Decision\Decision;
 
-class VipDiscountDecision extends DecisionBase
+class VipDiscountDecision extends Decision
 {
 
     public function name(): string
@@ -222,27 +221,25 @@ lessThan(mixed $value) // operator <
 
 کلا فلسفه  پکیج به این صورت هست که شما تویه یک سری کلاس تصمیم ها و کانیدشن های خودتون رو تعریف می کنید و در جای دیگه چه کنترلر چه داخل سرویس های دیگه میتونید این با دتیا ها و کاندیشن های متغییر مقایسه کنید 
 
-برای استفاده از  پکیج می تونید از کللاس اصلی یا فساد آن استفاده کنید 
-
-
+برای استفاده از  پکیج می تونید از کللاس اصلی یا فساد آن استفاده کنید
 
 ```php
-use MiliRulePilot\RulePilot\MiliRulePilot;
-use MiliRulePilot\Facade\MiliRulePilot;
+use Milirulepilot\Facade\RulePilot as FacadeRulePilot;
+use Milirulepilot\RulePilot;
 
 
-public function index(MiliRulePilot $miliRulePilot){
+public function index(RulePilot $rulePilot){
 
-$milirulepilot->evaloate(DecisionBaseContract $decision,array $conditions)
+$rulePilot->evaluate(VipDecision::class, array $conditions)
 
 
-MiliRulePilot::evaloate(DecisionBaseContract $decision,array $conditions)
+FacadeRulePilot::evaluate(VipDecision::class, array $conditions)
 
 }
 
 ```
 
-متد evaloate  : خوب این متد دو مقدار می گیره
+متد evaluate  : خوب این متد دو مقدار می گیره
 
 اولین مقدار در یه نمونه از کلاس decision است 
 
@@ -252,16 +249,14 @@ MiliRulePilot::evaloate(DecisionBaseContract $decision,array $conditions)
 
 نمونه
 
-
-
 ```php
-use MiliRulePilot\RulePilot\MiliRulePilot;
 use App\Decisions\VipDiscountDecision;
+use Milirulepilot\RulePilot;
 
 
-public function index(MiliRulePilot $miliRulePilot,VipDiscuntDecision $vipDiscountDecision){
+public function index(RulePilot $rulePilot){
 
- $ruleResult = $milirulepilot->evaloate($vipDiscountDecision,[
+ $ruleResult = $rulePilot->evaluate(VipDiscountDecision::class,[
                  [
                      'field' => 'userLevel',
                      'value' => 'vip'
@@ -300,9 +295,9 @@ $ruleResult->process() // return info process for decision
 
 
 ```php
-public function index(MiliRulePilot $miliRulePilot,VipDiscuntDecision $vipDiscountDecision){
+public function index(RulePilot $rulePilot){
 
- $ruleResult = $milirulepilot->evaloate($vipDiscountDecision,[
+ $ruleResult = $rulePilot->evaluate(VipDiscuntDecision::class,[
                  [
                      'field' => 'userLevel',
                      'value' => 'vip'
@@ -320,12 +315,6 @@ $ruleResult->matched();
 ```
 
 دستورات artisan  :
-
-
-```php
-```
-
-
 
 ```php
 php artisan decision:make VipDiscountDecision // create a decision class

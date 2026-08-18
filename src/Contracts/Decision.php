@@ -1,8 +1,8 @@
 <?php
 
-namespace MiliRulePilot\Support\Contracts;
+namespace Milirulepilot\Contracts;
 
-interface DecisionBaseContract
+interface Decision
 {
     public function name(): string;
     public function conditions(): array;

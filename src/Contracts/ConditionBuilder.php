@@ -1,8 +1,8 @@
 <?php
 
-namespace MiliRulePilot\Support\Contracts;
+namespace Milirulepilot\Contracts;
 
-interface ConditionBuildContract
+interface ConditionBuilder
 {
     public function field(string $field): self;
     public function stopOrFail(): self;
