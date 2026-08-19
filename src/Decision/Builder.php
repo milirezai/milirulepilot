@@ -16,7 +16,7 @@ class Builder
     {
         $setName = Str::endsWith($decisionName,'Decision') ? $decisionName : $decisionName.'Decision';
         $path = app_path('Decisions').'/'.$setName.'.php';
-        $stub = __DIR__.'/../../../src/Stub/decision.stub';
+        $stub = __DIR__.'/../Stub/decision.stub';
 
         if (!$this->has($setName)){
             File::copy($stub,$path);
