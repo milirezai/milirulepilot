@@ -4,8 +4,8 @@ namespace Milirulepilot\Comparison\Operators;
 
 class LessThan extends Operator
 {
-    public function campare(mixed $condition, mixed $decision)
+    public function campare(mixed $valueInDecision, mixed $valueInCondition)
     {
-        return $condition < $decision;
+        return $valueInCondition < $valueInDecision;
     }
 }
