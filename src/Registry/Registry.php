@@ -3,9 +3,9 @@ namespace Milirulepilot\Registry;
 
 class Registry
 {
-    protected array $commands;
-    protected array $operators;
-    protected array $decisions;
+    protected array $commands = [];
+    protected array $operators = [];
+    protected array $decisions = [];
 
     public function commands(array $commands): self
     {
