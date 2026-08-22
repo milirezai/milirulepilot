@@ -6,6 +6,7 @@ use Milirulepilot\Comparison\Operators\Equal;
 use Milirulepilot\Comparison\Operators\GreaterThan;
 use Milirulepilot\Comparison\Operators\LessThan;
 use Milirulepilot\Comparison\Operators\NotEqual;
+use Milirulepilot\Facade\Registry;
 
 class Comparison
 {
@@ -16,22 +17,12 @@ class Comparison
       }
     private function findOperator(string $operator)
     {
-        $operatorClass = null;
-        switch ($operator){
-            case '=':
-                $operatorClass = new Equal();
-                break;
-            case '>':
-                $operatorClass = new GreaterThan();
-                break;
-            case '<':
-                $operatorClass = new LessThan();
-                break;
-            case '!=':
-                $operatorClass = new NotEqual();
-                break;
-        }
-        return $operatorClass;
+        return match($operator){
+            '=' => Registry::getOperators()['equl'],
+            '>' => Registry::getOperators()['greaterThan'],
+            '<' => Registry::getOperators()['lessThan'],
+            '!=' => Registry::getOperators()['notEqul']
+        };
     }
 
 }

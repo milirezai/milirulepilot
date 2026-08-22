@@ -11,6 +11,11 @@ use Milirulepilot\Condition\Dto;
 use Milirulepilot\Contracts\ConditionBuilder;
 use Milirulepilot\Contracts\ConditionContent;
 use Milirulepilot\Registry\Registry;
+use Milirulepilot\Facade\Registry as FacadeRegistry;
+use Milirulepilot\Comparison\Operators\Equal;
+use Milirulepilot\Comparison\Operators\NotEqual;
+use Milirulepilot\Comparison\Operators\GreaterThan;
+use Milirulepilot\Comparison\Operators\LessThan;
 
 class RulePilotServiceProvider extends ServiceProvider
 {
@@ -37,7 +42,6 @@ class RulePilotServiceProvider extends ServiceProvider
             DecisionList::class,
             DecisionDelete::class
         ]);
-
     }
 
     /**
@@ -45,6 +49,11 @@ class RulePilotServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        FacadeRegistry::operators([
+            'equal' => Equal::class,
+            'notEqul' => NotEqual::class,
+            'lessThan' => LessThan::class,
+            'greaterThan' => GreaterThan::class
+        ]);
     }
 }
