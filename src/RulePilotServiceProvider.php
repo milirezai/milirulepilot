@@ -51,7 +51,7 @@ class RulePilotServiceProvider extends ServiceProvider
     {
         FacadeRegistry::operators([
             'equal' => Equal::class,
-            'notEqul' => NotEqual::class,
+            'notEqual' => NotEqual::class,
             'lessThan' => LessThan::class,
             'greaterThan' => GreaterThan::class
         ]);
