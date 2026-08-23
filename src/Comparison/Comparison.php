@@ -17,11 +17,12 @@ class Comparison
       }
     private function findOperator(string $operator)
     {
+        $operators = Registry::getOperators();
         return match($operator){
-            '=' => Registry::getOperators()['equal'],
-            '>' => Registry::getOperators()['greaterThan'],
-            '<' => Registry::getOperators()['lessThan'],
-            '!=' => Registry::getOperators()['notEqual']
+            '=' => $operators['equal'],
+            '>' => $operators['greaterThan'],
+            '<' => $operators['lessThan'],
+            '!=' => $operators['notEqual']
         };
     }
 
