@@ -12,9 +12,9 @@ class Comparison
 {
     public function compare(mixed $decision, mixed $condition)
     {
-             return $this->findOperator($decision->getOperator())
-                ->campare($decision->getValue(),$condition->getValue());
-      }
+        return app($this->findOperator($decision->getOperator()))
+            ->campare($decision->getValue(),$condition->getValue());
+     }
     private function findOperator(string $operator)
     {
         $operators = Registry::getOperators();
@@ -25,5 +25,4 @@ class Comparison
             '!=' => $operators['notEqual']
         };
     }
-
 }
