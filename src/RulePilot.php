@@ -1,13 +1,13 @@
 <?php
 
-namespace Milirulepilot;
+namespace Mili\RulePilot;
 
 use Illuminate\Support\Str;
-use Milirulepilot\Condition\Dto;
-use Milirulepilot\Contracts\ConditionBuilder;
-use Milirulepilot\Contracts\Decision;
-use Milirulepilot\Core\Engine;
-use Milirulepilot\Facade\Registry;
+use Mili\RulePilot\Condition\Dto;
+use Mili\RulePilot\Contracts\ConditionBuilder;
+use Mili\RulePilot\Contracts\Decision;
+use Mili\RulePilot\Core\Engine;
+use Mili\RulePilot\Facade\Registry;
 
 class RulePilot
 {

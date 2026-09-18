@@ -1,11 +1,11 @@
 <?php
 
-namespace Milirulepilot\Commands;
+namespace Mili\RulePilot\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use Milirulepilot\Decision\Builder;
+use Mili\RulePilot\Decision\Builder;
 
 class DecisionList extends Command
 {

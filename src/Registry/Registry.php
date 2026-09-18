@@ -1,5 +1,5 @@
 <?php
-namespace Milirulepilot\Registry;
+namespace Mili\RulePilot\Registry;
 
 class Registry
 {

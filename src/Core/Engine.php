@@ -1,9 +1,9 @@
 <?php
 
-namespace Milirulepilot\Core;
+namespace Mili\RulePilot\Core;
 
-use Milirulepilot\Comparison\Comparison;
-use Milirulepilot\Result\Result;
+use Mili\RulePilot\Comparison\Comparison;
+use Mili\RulePilot\Result\Result;
 
 class Engine
 {

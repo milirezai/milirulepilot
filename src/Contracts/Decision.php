@@ -1,6 +1,6 @@
 <?php
 
-namespace Milirulepilot\Contracts;
+namespace Mili\RulePilot\Contracts;
 
 interface Decision
 {

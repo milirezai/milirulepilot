@@ -1,12 +1,12 @@
 <?php
 
-namespace Milirulepilot\Comparison;
+namespace Mili\RulePilot\Comparison;
 
-use Milirulepilot\Comparison\Operators\Equal;
-use Milirulepilot\Comparison\Operators\GreaterThan;
-use Milirulepilot\Comparison\Operators\LessThan;
-use Milirulepilot\Comparison\Operators\NotEqual;
-use Milirulepilot\Facade\Registry;
+use Mili\RulePilot\Comparison\Operators\Equal;
+use Mili\RulePilot\Comparison\Operators\GreaterThan;
+use Mili\RulePilot\Comparison\Operators\LessThan;
+use Mili\RulePilot\Comparison\Operators\NotEqual;
+use Mili\RulePilot\Facade\Registry;
 
 class Comparison
 {

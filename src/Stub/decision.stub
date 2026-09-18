@@ -2,7 +2,7 @@
 
 namespace App\Decisions;
 
-use Milirulepilot\Decision\Decision;
+use Mili\RulePilot\Decision\Decision;
 
 class {className} extends Decision
 {

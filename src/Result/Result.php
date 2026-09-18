@@ -1,6 +1,6 @@
 <?php
 
-namespace Milirulepilot\Result;
+namespace Mili\RulePilot\Result;
 
 class Result
 {

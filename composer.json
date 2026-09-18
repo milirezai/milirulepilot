@@ -5,13 +5,13 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Milirulepilot\\": "src/"
+            "Mili\\RulePilot\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Milirulepilot\\RulepilotServiceProvider"
+                "Mili\\RulePilot\\RulePilotServiceProvider"
             ]
         }
     },

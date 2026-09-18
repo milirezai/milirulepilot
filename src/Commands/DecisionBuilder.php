@@ -1,10 +1,10 @@
 <?php
 
-namespace Milirulepilot\Commands;
+namespace Mili\RulePilot\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
-use Milirulepilot\Decision\Builder as DecBuilder;
+use Mili\RulePilot\Decision\Builder as DecBuilder;
 
 class DecisionBuilder extends Command
 {

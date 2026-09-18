@@ -1,8 +1,8 @@
 <?php
 
-namespace Milirulepilot\Condition;
+namespace Mili\RulePilot\Condition;
 
-use Milirulepilot\Contracts\ConditionContent;
+use Mili\RulePilot\Contracts\ConditionContent;
 
 class Dto implements ConditionContent
 {

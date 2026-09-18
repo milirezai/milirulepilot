@@ -1,6 +1,6 @@
 <?php
 
-namespace Milirulepilot\Facade;
+namespace Mili\RulePilot\Facade;
 
 use Illuminate\Support\Facades\Facade;
 

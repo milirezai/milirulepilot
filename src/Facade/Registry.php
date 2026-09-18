@@ -1,10 +1,10 @@
 <?php
 
-namespace Milirulepilot\Facade;
+namespace Mili\RulePilot\Facade;
 
 
 use Illuminate\Support\Facades\Facade;
-use Milirulepilot\Contracts\Decision;
+use Mili\RulePilot\Contracts\Decision;
 
 /**
 * @method array evaloate(Decision $contract, array $conditions)

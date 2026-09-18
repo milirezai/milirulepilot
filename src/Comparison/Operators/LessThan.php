@@ -1,6 +1,6 @@
 <?php
 
-namespace Milirulepilot\Comparison\Operators;
+namespace Mili\RulePilot\Comparison\Operators;
 
 class LessThan extends Operator
 {

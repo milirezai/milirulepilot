@@ -1,9 +1,9 @@
 <?php
 
-namespace Milirulepilot\Decision;
+namespace Mili\RulePilot\Decision;
 
-use Milirulepilot\Contracts\ConditionBuilder;
-use Milirulepilot\Contracts\Decision as DecisionContract;
+use Mili\RulePilot\Contracts\ConditionBuilder;
+use Mili\RulePilot\Contracts\Decision as DecisionContract;
 
 abstract class Decision implements DecisionContract
 {

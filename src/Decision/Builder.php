@@ -1,6 +1,6 @@
 <?php
 
-namespace Milirulepilot\Decision;
+namespace Mili\RulePilot\Decision;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;

@@ -1,17 +1,17 @@
 <?php
 
-namespace Milirulepilot;
+namespace Mili\RulePilot;
 
 use Illuminate\Support\ServiceProvider;
-use Milirulepilot\Commands\DecisionBuilder;
-use Milirulepilot\Commands\DecisionDelete;
-use Milirulepilot\Commands\DecisionList;
-use Milirulepilot\Condition\Builder;
-use Milirulepilot\Condition\Dto;
-use Milirulepilot\Contracts\ConditionBuilder;
-use Milirulepilot\Contracts\ConditionContent;
-use Milirulepilot\Registry\Registry;
-use Milirulepilot\Facade\Registry as FacadeRegistry;
+use Mili\RulePilot\Commands\DecisionBuilder;
+use Mili\RulePilot\Commands\DecisionDelete;
+use Mili\RulePilot\Commands\DecisionList;
+use Mili\RulePilot\Condition\Builder;
+use Mili\RulePilot\Condition\Dto;
+use Mili\RulePilot\Contracts\ConditionBuilder;
+use Mili\RulePilot\Contracts\ConditionContent;
+use Mili\RulePilot\Registry\Registry;
+use Mili\RulePilot\Facade\Registry as FacadeRegistry;
 class RulePilotServiceProvider extends ServiceProvider
 {
     /**
@@ -45,10 +45,10 @@ class RulePilotServiceProvider extends ServiceProvider
     public function boot(): void
     {
         FacadeRegistry::operators([
-            'equal' => \Milirulepilot\Comparison\Operators\Equal::class,
-            'notEqual' => \Milirulepilot\Comparison\Operators\NotEqual::class,
-            'lessThan' => \Milirulepilot\Comparison\Operators\LessThan::class,
-            'greaterThan' => \Milirulepilot\Comparison\Operators\GreaterThan::class
+            'equal' => \Mili\RulePilot\Comparison\Operators\Equal::class,
+            'notEqual' => \Mili\RulePilot\Comparison\Operators\NotEqual::class,
+            'lessThan' => \Mili\RulePilot\Comparison\Operators\LessThan::class,
+            'greaterThan' => \Mili\RulePilot\Comparison\Operators\GreaterThan::class
         ]);
     }
 }

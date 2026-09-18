@@ -1,8 +1,8 @@
 <?php
 
-namespace Milirulepilot\Condition;
+namespace Mili\RulePilot\Condition;
 
-use Milirulepilot\Contracts\ConditionBuilder;
+use Mili\RulePilot\Contracts\ConditionBuilder;
 
 class Builder extends Condition
 {
