@@ -2,10 +2,18 @@
 
 namespace Mili\RulePilot\Comparison\Operators;
 
-class LessThan extends Operator
+use Mili\RulePilot\Contracts\Operator;
+
+class LessThan implements Operator
 {
-    public function campare(mixed $valueInDecision, mixed $valueInCondition)
+
+    public function campare(mixed $condition, mixed $decision): bool
     {
-        return $valueInCondition < $valueInDecision;
+        // TODO: Implement campare() method.
+    }
+
+    public function name(): string
+    {
+        // TODO: Implement name() method.
     }
 }

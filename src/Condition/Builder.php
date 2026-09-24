@@ -2,47 +2,37 @@
 
 namespace Mili\RulePilot\Condition;
 
-use Mili\RulePilot\Contracts\ConditionBuilder;
+use Mili\RulePilot\Condition\GroupCondition;
+use Mili\RulePilot\Condition\PendingCondition;
+use Mili\RulePilot\Condition\SingleCondition;
 
-class Builder extends Condition
+class Builder
 {
-
-    public function field(string $field): ConditionBuilder
+    public function and(\Closure $closure): array
     {
-        $this->field = $field;
-        return $this;
+        return $this->resolve('and',$closure);
     }
 
-    public function equal(mixed $value): ConditionBuilder
+    public function or(\Closure $closure): array
     {
-        $this->value = $value;
-        $this->operator = '=';
-        return $this;
+        return $this->resolve('or',$closure);
     }
+    public function any(\Closure $closure): array
+    {
+        return $this->resolve('any',$closure);
+    }
+    public function not(\Closure $closure): array
+    {
+        return $this->resolve('not',$closure);
+    }
+    protected function resolve(string $logic, \Closure $closure): array
+    {
+        $group = new GroupCondition($logic);
+        $conditions = call_user_func($closure,app(PendingCondition::class));
+        $items = collect($conditions)->map(function ($item) use ($group){
+            return $group->add($item);
+        })->last();
 
-    public function notEqual(mixed $value): ConditionBuilder
-    {
-        $this->value = $value;
-        $this->operator = '!=';
-        return $this;
+        return $items->explain();
     }
-    public function greaterThan(mixed $value): ConditionBuilder
-    {
-        $this->value = $value;
-        $this->operator = '>';
-        return $this;
-    }
-    public function lessThan(mixed $value): ConditionBuilder
-    {
-        $this->value = $value;
-        $this->operator = '<';
-        return $this;
-    }
-
-    public function stopOrFail(): ConditionBuilder
-    {
-        $this->stopOrFail = true;
-        return $this;
-    }
-
 }
