@@ -42,6 +42,7 @@ class Engine
                 {
                     if ($decisionCondition->getStopOrFail()){
                         $history[$decisionCondition->getField()] = false;
+                        break;
                     }
                     $history[$decisionCondition->getField()] = false;
                 }

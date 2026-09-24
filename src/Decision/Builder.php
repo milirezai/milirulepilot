@@ -9,11 +9,11 @@ class Builder
 {
     public function has(string $name): bool
     {
-        return File::exists(app_path('Decisions').'/'.$name.'.php');
+        return File::exists(app_path('Decisions').'/'.$this->resolveName($name).'.php');
     }
     public function build(string $decisionName)
     {
-        $setName = Str::endsWith($decisionName,'Decision') ? $decisionName : $decisionName.'Decision';
+        $setName = $this->resolveName($decisionName);
         $path = app_path('Decisions').'/'.$setName.'.php';
         $stub = __DIR__.'/../Stub/decision.stub';
 
@@ -26,17 +26,21 @@ class Builder
     }
     public function delete(string $name)
     {
+        $name = $this->resolveName($name);
         if (!$this->has($name))
             return false;
         File::delete(app_path('Decisions/').$name.'.php');
         return true;
     }
 
-    public function list()
+    public function list(): array
     {
-        $decisionList = glob(app_path('Decisions/').'*.php');
-        foreach ($decisionList as $item){
-            echo File::name($item);
-        }
+        return collect(glob(app_path('Decisions/').'*.php'))->map(function ($decision){
+            return File::name($decision);
+        })->toArray();
+    }
+    protected function resolveName(string $name): string
+    {
+        return Str::endsWith($name,'Decision') ? $name : $name.'Decision';
     }
 }

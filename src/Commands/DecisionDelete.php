@@ -31,7 +31,7 @@ class DecisionDelete extends Command
         $name = $this->argument('name');
         if ($decisionBuilder->delete($name))
             return $this->info('decision delete success');
-        return $this->error('decision not deleted');
+        return $this->error('decision not found');
     }
 
 }

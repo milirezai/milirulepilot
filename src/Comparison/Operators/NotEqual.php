@@ -2,10 +2,18 @@
 
 namespace Mili\RulePilot\Comparison\Operators;
 
-class NotEqual extends Operator
+use Mili\RulePilot\Contracts\Operator;
+
+class NotEqual implements Operator
 {
-    public function campare(mixed $condition, mixed $decision)
+
+    public function campare(mixed $condition, mixed $decision): bool
     {
-        return $condition != $decision;
+        // TODO: Implement campare() method.
+    }
+
+    public function name(): string
+    {
+        // TODO: Implement name() method.
     }
 }
